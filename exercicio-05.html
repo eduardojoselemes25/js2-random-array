@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-05</title>
+    <script>
+        totalPassageiros = prompt("Quantas poltronas tem o onibus?:");
+        nomes = [];
+        idades = [];
+        soma = 0;
+        //leitura das idades e dos nomes dos passageiros
+        for(i=0; i< totalPassageiros; i++){
+            nomes.push(prompt(`Qual o Nome do passageiro ${i+1}:`));
+            idade = parseInt(prompt(`Qual a Idade do passageiro ${i+1}:`));
+            soma = soma + idade;
+            idades.push(idade);
+        }
+        // media das idades dos passageiros
+        media = Number((soma/totalPassageiros).toFixed(2));
+        document.write(`<p>Média das idades: ${soma/totalPassageiros}</p>`);
+
+        //sorteio do passageiro
+        ["Eduardo","duda","chais"]
+        idPassageiro = parseInt(Math.random()*totalPassageiros)
+        document.write(`Nome do passageiro sorteado: ${nomes[idPassageiro]}`)
+
+        //nome dos passageiros
+        //document.write(`<p>Nome dos passageiros = ${nomes}</p>`);
+        //document.write(`<p>Idade dos passageiros = ${idades}</p>`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

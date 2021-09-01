@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio-11</title>
+    <style>
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: red;
+            padding: 15px;
+            padding-top: 0px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+        }
+
+        img {
+            text-align: center;
+            padding: 5px;
+            height: 190px;
+            width: 130px;
+        }
+
+        .painelImg {
+            text-align: center;
+        }
+    </style>
+    <script>
+        qtdCartasJogador = 3;
+        totalCartas = 27;
+        qtdJogadores = 4;
+        ordem = [];
+        while (ordem.length < 12) {
+            numSorteado = (Math.floor(Math.random() * totalCartas) + 1);
+            if (ordem.indexOf(numSorteado) == -1) {
+                ordem.push(numSorteado);
+            }
+        }
+        imgArray = [];
+        for (i = 1; i < (totalCartas + 1); i++) {
+            imgArray[i] = new Image();
+            imgArray[i].src = 'imagens/carta' + i + '.png';
+        }
+        document.write("<h1>Jogue Truco</h1>");
+        document.write("<h2>Cartas Sorteadas</h2>");
+        cont = 0;
+        cont1 = 0;
+        while (cont1 < qtdJogadores) {
+            document.write("<div class='col-dg-12 col-dm-12' style='padding: 5px'><div class='col-dg-5 col-dm-5'>")
+            document.write("<p>Cartas do Jogador " + (cont1 + 1) + ": " + "</p>");
+            document.write("</div><div class='col-dg-7 col-dm-7 painelImg'>")
+            for (i = 0; i < qtdCartasJogador; i++) {
+                document.write("<img src=" + imgArray[ordem[cont]].src + " alt=''>" + " ");
+                cont = cont + 1;
+            }
+            document.write("</div></div>")
+            cont1 = cont1 + 1;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

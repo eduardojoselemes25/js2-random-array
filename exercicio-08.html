@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<script>
+    joquempo = ["Pedra", "Papel", "Tesoura"];
+    jogador1 = joquempo[parseInt(Math.random() * 3) + 0];
+    jogador2 = joquempo[parseInt(Math.random() * 3) + 0];
+    console.log(jogador1 + " - " + jogador2);
+
+    while (jogador1 === jogador2) {
+        jogador1 = joquempo[parseInt(Math.random() * 3) + 0];
+        jogador2 = joquempo[parseInt(Math.random() * 3) + 0];
+        console.log(jogador1 + " caiu no while " + jogador2);
+    }
+
+    if (jogador1 === "Pedra" && jogador2 === "Papel") {
+        document.write(`<img src="imagens/${jogador2}.png">`);
+        document.write(`<p>JOGADOR 2</p>`);
+    } else if (jogador1 === "Pedra" && jogador2 === "Tesoura") {
+        document.write(`<img src="imagens/${jogador1}.png">`);
+        document.write(`<p>JOGADOR 1</p>`);
+    } else if (jogador1 === "Papel" && jogador2 === "Tesoura") {
+        document.write(`<img src="imagens/${jogador2}.png">`);
+        document.write(`<p>JOGADOR 2</p>`);
+    } else if (jogador1 === "Papel" && jogador2 === "Pedra") {
+        document.write(`<img src="imagens/${jogador1}.png">`);
+        document.write(`<p>JOGADOR 1</p>`);
+    } else if (jogador1 === "Tesoura" && jogador2 === "Pedra") {
+        document.write(`<img src="imagens/${jogador2}.png">`);
+        document.write(`<p>JOGADOR 2</p>`);
+    } else if (jogador1 === "Tesoura" && jogador2 === "Papel") {
+        document.write(`<img src="imagens/${jogador1}.png">`);
+        document.write(`<p>JOGADOR 1</p>`);
+    }
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
